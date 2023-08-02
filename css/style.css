@@ -53,6 +53,10 @@
     color: #FFB936;
 }
 
+.header .h_bottom {
+    border-bottom: 1px solid #fff;
+}
+
 .header .h_bottom .header_wrap {
     background: #282B91;
     justify-content: space-between;
@@ -67,6 +71,7 @@
 .header .gnb>ul {
     display: flex;
 }
+
 .header .gnb>ul>li {
     display: block;
     font-size: 18rem;
@@ -94,7 +99,7 @@
     display: flex;
     gap: 60rem;
     top: 100rem;
-    left: 42%;
+    left: 40%;
     transform: translate(0, -16rem);
     padding: 16rem 40rem 32rem;
     background: #f9f9f9;
@@ -124,7 +129,7 @@
 .header .gnb .sub>li~li::before {
     content: "";
     position: absolute;
-    top: 14rem;
+    top: 20%;
     left: -30rem;
     width: 1px;
     height: 80%;
@@ -157,19 +162,25 @@
 
 
 
-.main_vi {
-    z-index: -1;
-}
 
 .main_vi .main_slide .itm {
-    height: 640rem;
+    height: calc(100vh - 100rem);
 }
 
 .main_vi .main_slide .itm01 {
-    background: url(../images/002.jpg) no-repeat center center/cover;
+    background: url(../images/main_vi01.jpg) no-repeat center center/cover;
 }
+
 .main_vi .main_slide .itm02 {
-    background: url(../images/003.jpg) no-repeat center center/cover;
+    background: url(../images/main_vi02.jpg) no-repeat center center/cover;
+}
+
+.main_vi .main_slide .itm03 {
+    background: url(../images/main_vi03.jpg) no-repeat center bottom/cover;
+}
+
+.main_vi .main_slide .itm04 {
+    background: url(../images/main_vi04.jpg) no-repeat center center/cover;
 }
 
 
@@ -178,13 +189,13 @@
 
 .main_qui {
     position: relative;
-    margin: -100rem 0 0 0;
+    margin: -56rem 0 0 0;
     z-index: 90;
     color: #fafafa;
 }
 
 .main_qui::before {
-    height: 160rem;
+    height: 140rem;
     content: "";
     position: absolute;
     background: #282B91;
@@ -193,11 +204,16 @@
     z-index: -1;
 }
 
+.main_qui .material-symbols-outlined {
+    font-size: 70rem;
+    font-weight: 200;
+}
+
 .main_qui ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     align-items: center;
-    height: 160rem;
+    height: 140rem;
     border-radius: 200rem;
     background: #282B91;
 }
@@ -208,13 +224,199 @@
     gap: 30rem;
 }
 
-.main_qui ul li i {
-    font-size: 70rem;
-}
 .main_qui .txt_box strong {
     display: block;
     font-size: 24rem;
     font-weight: 600;
     margin: 0 0 8rem 0;
 }
-.main_qui .txt_box span {}
+
+
+
+
+
+
+
+
+
+.main_tik {
+    padding: 100rem 0;
+}
+
+.main_tik .tit {
+    margin: 0 0 40rem 0;
+}
+
+.main_tik .tit h2 {
+    position: relative;
+    font-size: 32rem;
+    font-weight: 600;
+    margin: 0 0 12rem 0;
+}
+
+.main_tik .tit h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    z-index: -1;
+    width: 215rem;
+    height: 12rem;
+    background: #FFB936;
+}
+
+.main_tik .tik_wrap {
+    display: grid;
+    gap: 30rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.main_tik .tik_wrap figure {
+    position: relative;
+    height: 600rem;
+    width: 270rem;
+    overflow: hidden;
+    border-radius: 8rem 8rem 0 0;
+}
+
+.main_tik .tik_wrap figure::before {
+    content: "";
+    position: absolute;
+    bottom: -12rem;
+    left: -12rem;
+    width: 24rem;
+    height: 24rem;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.main_tik .tik_wrap figure::after {
+    content: "";
+    position: absolute;
+    bottom: -12rem;
+    right: -12rem;
+    width: 24rem;
+    height: 24rem;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.main_tik .tik_wrap .itm01 {
+    background: url(../images/main_tik01.jpg)no-repeat center center/cover;
+}
+
+.main_tik .tik_wrap .itm02 {
+    background: url(../images/main_tik02.jpg)no-repeat center center/cover;
+}
+
+.main_tik .tik_wrap .itm03 {
+    background: url(../images/main_tik03.jpg)no-repeat center center/cover;
+}
+
+.main_tik .tik_wrap .itm04 {
+    background: url(../images/main_tik04.jpg)no-repeat center center/cover;
+}
+
+.main_tik .tik_wrap .btn {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    text-align: center;
+}
+
+
+.main_tik .tik_wrap .btn::before {
+    background: radial-gradient(#fff 49%, transparent 51%);
+    background-position: center;
+    background-repeat: space;
+    background-size: 20rem 20rem;
+    content: " ";
+    display: block;
+    position: absolute;
+    top: -10rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 80%;
+    height: 20rem;
+}
+
+.main_tik figure .btn a {
+    display: block;
+    line-height: 56rem;
+    color: #fafafa;
+    background: #000;
+}
+
+.main_tik figure .txt_box {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #fafafa;
+    width: 100%;
+    padding: 40rem 15rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 69.79%);
+    text-align: center;
+}
+
+.main_tik figure .txt_box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -12rem;
+    width: 24rem;
+    height: 24rem;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.main_tik figure .txt_box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -12rem;
+    width: 24rem;
+    height: 24rem;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.main_tik figure .txt_box strong {
+    display: block;
+    font-size: 20rem;
+    font-weight: 600;
+    margin: 0 0 12rem 0;
+}
+
+.main_tik figure .txt_box strong::before {
+    content: "";
+    display: block;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+    transform: translate(0, -30rem);
+}
+
+.main_tik figure .txt_box p {
+    font-size: 14rem;
+    font-weight: 300;
+}
+
+.main_tik figure .txt_box p::before {
+    background: radial-gradient(#fff 45%, transparent 50%);
+    background-position: center;
+    background-repeat: space;
+    background-size: 20rem 20rem;
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: -10rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 70%;
+    height: 20rem;
+}
