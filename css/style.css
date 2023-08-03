@@ -274,6 +274,7 @@
     display: grid;
     gap: 30rem;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    justify-content: center;
 }
 
 .main_tik .tik_wrap figure {
