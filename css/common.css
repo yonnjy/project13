@@ -39,19 +39,33 @@ body {
     padding: 100rem 0;
 }
 
-._sec>.tit {
+._sec .tit {
     max-width: 1200rem;
     margin: 0 auto 40rem auto;
     text-align: center;
 }
 
-._sec>.tit h2 {
+._sec .tit h2 {
+    display: inline-block;
+    position: relative;
     font-size: 32rem;
-    font-weight: 700;
+    font-weight: 600;
     margin: 0 0 12rem 0;
 }
 
-._sec>.tit p {
+._sec .tit h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: -2px;
+    z-index: -1;
+    width: 100%;
+    height: 12rem;
+    background: #FFB936;
+}
+
+._sec .tit p {
     font-size: 16rem;
     font-weight: 300;
 }
@@ -66,7 +80,7 @@ p {
 
 .footer {
     font-size: 14rem;
-    color: #bbb;
+    color: #666;
 }
 
 .footer .st {
