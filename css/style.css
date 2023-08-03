@@ -278,7 +278,7 @@
 
 @media (max-width: 616px) {
     .main_tik .tik_wrap {
-        grid-template-columns: 1fr;
+        grid-template-columns: auto;
         justify-content: center;
     }
 }
