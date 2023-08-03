@@ -9,7 +9,7 @@ $(function () {
             }
         });
     });
-    
+
     const mainSlide = new Swiper('.main_slide', {
         loop: true,
         parallax: true,
@@ -19,6 +19,39 @@ $(function () {
         //     disableOnInteraction: false,
         // },
         slideActiveClass: 'on',
+        loopAdditionalSlides: 1,
+
+    });
+
+    const waveSlide = new Swiper('.wave_slide', {
+        loop: true,
+        parallax: true,
+        speed: 3000,
+        slideActiveClass: 'on',
+        spaceBetween: 30,
+        // slidesPerGroup : 3,
+        loopFillGroupWithBlank: true,
+
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+
+        breakpoints: {
+            1200: {
+                slidesPerView: 3,
+
+                768: {
+                    slidesPerView: 1,
+                },
+            }
+        }
+
 
     });
 
@@ -44,4 +77,16 @@ $(function () {
         cartNum = cartNum + 1;
         $('.header .h_top i small').text(cartNum);
     });
+
+    $('.header .lang').on('click', function () {
+        $(this).toggleClass('on');
+    });
+
+    $('.header .ham_btn').on('click', function () {
+        $('.header .h_bottom').toggleClass('on');
+    });
+
+    $('.header .gnb>ul>li').on('click', function(){
+        $('.header .sub').toggleClass('on');
+    })
 });
