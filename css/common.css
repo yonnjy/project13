@@ -50,7 +50,7 @@ body {
     position: relative;
     font-size: 32rem;
     font-weight: 600;
-    margin: 0 0 12rem 0;
+    margin: 0 0 20rem 0;
 }
 
 ._sec .tit h2::before {
@@ -63,11 +63,12 @@ body {
     width: 100%;
     height: 12rem;
     background: #FFB936;
+    transition: 1s;
+    opacity: 0;
 }
 
 ._sec .tit p {
     font-size: 16rem;
-    font-weight: 300;
 }
 
 .bg {

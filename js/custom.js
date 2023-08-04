@@ -13,11 +13,11 @@ $(function () {
     const mainSlide = new Swiper('.main_slide', {
         loop: true,
         parallax: true,
-        speed: 1000,
-        // autoplay: {
-        //     delay: 4000,
-        //     disableOnInteraction: false,
-        // },
+        speed: 3000,
+        autoplay: {
+            delay: 3000,
+            // disableOnInteraction: false,
+        },
         slideActiveClass: 'on',
         loopAdditionalSlides: 1,
 
@@ -29,13 +29,14 @@ $(function () {
         speed: 3000,
         slideActiveClass: 'on',
         spaceBetween: 30,
+        slidesPerView: 1,
         // slidesPerGroup : 3,
         loopFillGroupWithBlank: true,
 
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
+        // navigation: {
+        //     nextEl: '.swiper-button-next',
+        //     prevEl: '.swiper-button-prev',
+        // },
 
         autoplay: {
             delay: 2000,
@@ -45,11 +46,10 @@ $(function () {
         breakpoints: {
             1200: {
                 slidesPerView: 3,
-
-                768: {
-                    slidesPerView: 1,
-                },
-            }
+            },
+            820: {
+                slidesPerView: 2,
+            },
         }
 
 
@@ -86,7 +86,33 @@ $(function () {
         $('.header .h_bottom').toggleClass('on');
     });
 
-    $('.header .gnb>ul>li').on('click', function(){
-        $('.header .sub').toggleClass('on');
-    })
+
+    $('.main_show .tab_menu li').on('click', function (event) {
+        event.preventDefault();
+
+        let idx = $(this).index();
+        $(this).addClass('on')
+            .siblings().removeClass('on');
+
+        $('.main_show .con').eq(idx).addClass('on')
+            .siblings().removeClass('on');
+    });
+
+    $('.header .gnb>ul>li').on('click', function (e) {
+        if($('.header .gnb').hasClass('on')) {
+            e.preventDefault();
+            $(this).find('.sub').stop().slideToggle();
+        }
+    });
+
+    $(window).on('resize', function(){
+        $('.header .gnb').removeClass('on');
+        $('.sub').removeAttr('style');
+    });
+
+    $('.gnb').on('wheel', function (e) {
+        if ($('.gnb').hasClass('on')) {
+            e.preventDefault();
+        }
+    });
 });
